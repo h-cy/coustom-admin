@@ -1,4 +1,4 @@
-
+<div><a href="open-course-add" class='btn pull-right btn-success' style="margin-right:20px" role="button">新增公开课</a></div>
 <table class="table table-hover">
     <thead>
     <tr>
@@ -11,8 +11,18 @@
     </tr>
     </thead>
     <tbody>
-        <tr>
-            <td></td>
-        </tr>
+            {{#each course}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{description}}</td>
+                    <td><img src="/images/{{poster}}" alt="" style="width:100px;"></td>
+                    <td>{{date time 'YYYY-MM-DD'}}</td>
+                    <td>{{count}}</td>
+                    <td>
+                        <a href="open-course-update/{{id}}">更新</a>
+                        <a href="open-course-delete/{{id}}">删除</a>
+                    </td>
+                </tr>
+            {{/each}}
     </tbody>
 </table>

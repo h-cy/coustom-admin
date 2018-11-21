@@ -1,28 +1,22 @@
-{{#with course}}
 <form action="open-courses" method="post" enctype="multipart/form-data" style="width: 50%;margin: 10px auto;">
     <legend>新增公开课</legend>
-    
-    <input type="hidden" name="id" id="inputid" class="form-control" value="{{id}}">
-       
+
     <div class="form-group">
         <label for="name">名称</label>
-        <input type="text" class="form-control" id="name" name="name" value="{{name}}">
+        <input type="text" class="form-control" id="name" name="name">
     </div>
     <div class="form-group">
         <label for="description">描述</label>
-        <textarea name="description" id="description" class="form-control">
-            {{description}}
-        </textarea>
+        <textarea name="description" id="description" class="form-control"></textarea>
     </div>
     <div class="form-group">
         <label for="time">截止时间</label>
-        <input type="datetime-local" class="form-control" id="time" name="time" value="{{time}}">
+        <input type="datetime-local" class="form-control" id="time" name="time">
     </div>
     <div class="form-group">
         <label for="poster">封面图</label>
-        <input type="hidden" name="poster" id="inputposter" class="form-control" value="{{poster}}">
         <input type="file" class="form-control" id="file" name="file">
     </div>
     <button type="submit" class="btn btn-primary">提交</button>
 </form>
-{{/with}}
+
